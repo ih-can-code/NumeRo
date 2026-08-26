@@ -1,0 +1,65 @@
+:root {
+  --paper:          #F9F7F4;
+  --paper-2:        #EDEAE4;
+  --paper-3:        #DEDBD2;
+  --ink:            #1E1A14;
+  --ink-soft:       #4A4035;
+  --ink-mute:       #8A8278;
+  --accent:         #3A5273;
+  --accent-2:       #1E3A52;
+  --unique:         #C7813A;
+  --sketch-border:  2px solid var(--ink);
+
+
+--font-body: 'Lora', Georgia, serif;
+--font-sketch:  'Caveat', cursive;
+--font-mono:   'Space Mono', monospace;
+}
+
+.btn-ac       { grid-area: ac; }
+.btn-percent  { grid-area: pct; }
+.btn-divide   { grid-area: div; }
+.btn-multiply { grid-area: mul; }
+
+.btn-7 { grid-area: n7; }
+.btn-8 { grid-area: n8; }
+.btn-9 { grid-area: n9; }
+.btn-subtract { grid-area: sub; }
+
+.btn-4 { grid-area: n4; }
+.btn-5 { grid-area: n5; }
+.btn-6 { grid-area: n6; }
+.btn-add { grid-area: add; }
+
+.btn-1 { grid-area: n1; }
+.btn-2 { grid-area: n2; }
+.btn-3 { grid-area: n3; }
+.btn-exec { grid-area: exec; }
+
+.btn-0 { grid-area: n0; }
+.btn-dot { grid-area: dot; }
+
+/* Additional button styles for grid layout */
+
+.btn-ac { grid-area: 1 / 1 / 2 / 2; }
+.btn-percent { grid-area: 1 / 2 / 2 / 3; }
+.btn-divide { grid-area: 1 / 3 / 2 / 4; }
+.btn-multiply { grid-area: 1 / 4 / 2 / 5; }
+
+.btn-7 { grid-area: 2 / 1 / 3 / 2; }
+.btn-8 { grid-area: 2 / 2 / 3 / 3; }
+.btn-9 { grid-area: 2 / 3 / 3 / 4; }
+.btn-subtract { grid-area: 2 / 4 / 3 / 5; }
+
+.btn-4 { grid-area: 3 / 1 / 4 / 2; }
+.btn-5 { grid-area: 3 / 2 / 4 / 3; }
+.btn-6 { grid-area: 3 / 3 / 4 / 4; }
+.btn-add { grid-area: 3 / 4 / 4 / 5; }
+
+.btn-1 { grid-area: 4 / 1 / 5 / 2; }
+.btn-2 { grid-area: 4 / 2 / 5 / 3; }
+.btn-3 { grid-area: 4 / 3 / 5 / 4; }
+.btn-exec { grid-area: 4 / 4 / 6 / 5; }
+
+.btn-0 { grid-area: 5 / 1 / 6 / 3; }
+.btn-dot { grid-area: 5 / 3 / 6 / 4; }

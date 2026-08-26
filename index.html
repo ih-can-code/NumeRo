@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numero — Calculate Everything</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/utils/variables.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/utils/responsive.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+
+<!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+  <script src="js/components/visual.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+
+    <a href="index.html" class="logo">
+      Nume<span>Ro</span>
+      <span class="logo-line"></span>
+    </a>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search calculators..."
+        autocomplete="off"
+      >
+      <button type="button">
+        Search
+      </button>
+    </div>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li class="dropdown">
+
+        <a href="categories.html">
+          Categories
+          <span class="chevron">▾</span>
+        </a>
+
+        <ul class="dropdown-menu">
+
+          <li><a href="#">Mathematics</a></li>
+          <li><a href="#">Science</a></li>
+          <li><a href="#">Finance</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Converters and Utilities</a></li>
+          <li><a href="#">Others</a></li>
+
+        </ul>
+
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
+      <li>
+        <a href="scientific.html">Scientific Calculator</a>
+      </li>
+
+    </ul>
+
+    <a href="#calculators" class="nav-cta">
+      Get Started
+    </a>
+
+  </nav>
+</header>
+
+<main>
+  <!-- Ticker Strip -->
+  <div class="features-strip" aria-hidden="true">
+    <div class="features-ticker">
+        <span>BMI Calculator</span>
+        <span>Mortgage Calculator</span>
+        <span>Scientific Calculator</span>
+        <span>Percentage Calculator</span>
+        <span>Age Calculator</span>
+        <span>Currency Converter</span>
+        <span>Calorie Counter</span>
+        <span>Loan Calculator</span>
+        <span>Tax Calculator</span>
+        <span>Compound Interest</span>
+        <span>Unit Converter</span>
+        <span>GPA Calculator</span>
+        <span>Tip Calculator</span>
+        <span>Fuel Cost Calculator</span>
+        <span>BMR Calculator</span>
+        <span>Body Fat Calculator</span>
+        <span>Pregnancy Calculator</span>
+        <span>Meridian Calculator</span>
+        <span>Quadratic Solver</span>
+        <span>Discount Calculator</span>
+        <!-- duplicate set for seamless loop -->
+        <span>BMI Calculator</span>
+        <span>Mortgage Calculator</span>
+        <span>Scientific Calculator</span>
+        <span>Percentage Calculator</span>
+        <span>Age Calculator</span>
+        <span>Currency Converter</span>
+        <span>Calorie Counter</span>
+        <span>Loan Calculator</span>
+        <span>Tax Calculator</span>
+        <span>Compound Interest</span>
+        <span>Unit Converter</span>
+        <span>GPA Calculator</span>
+        <span>Tip Calculator</span>
+        <span>Fuel Cost Calculator</span>
+        <span>BMR Calculator</span>
+        <span>Body Fat Calculator</span>
+        <span>Pregnancy Calculator</span>
+        <span>Meridian Calculator</span>
+        <span>Quadratic Solver</span>
+        <span>Discount Calculator</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <h1 id="hero-heading">
+        Calculate<br>
+        <span class="underline-sketch">everything</span>
+      </h1>
+      <p class="hero-desc">
+        From body mass to mortgage payments, percentages to scientific equations — every tool is purpose-built for accuracy and speed.
+      </p>
+      <div class="hero-search" role="search">
+        <input type="text" id="calc-search" placeholder="Search calculators..." aria-label="Search calculators">
+        <button type="button" aria-label="Search calculators">Search</button>
+      </div>
+      <div class="hero-stats" aria-label="Key statistics">
+        <div class="stat-item">
+          <strong>40+</strong>
+          <span>Calculators</span>
+        </div>
+        <div class="stat-item">
+          <strong>6</strong>
+          <span>Categories</span>
+        </div>
+        <div class="stat-item">
+          <strong>Instant</strong>
+          <span>Results</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="calc-card">
+        <strong class="deco-tag-tryme">
+          Try me
+          <svg class="tryme-arrow" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 4 C4 14, 20 20, 18 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 34 L12 26 M18 34 L24 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </strong>
+
+        <div class="calc-screen">
+          <div class="expr" id="expr-value"></div>
+          <div class="result" id="result-value">0</div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-btn fn btn-ac">AC</div>
+          <div class="calc-btn fn btn-percent">%</div>
+          <div class="calc-btn op btn-divide" data-value="÷">÷</div>
+          <div class="calc-btn op btn-multiply" data-value="×">×</div>
+          <div class="calc-btn btn-7">7</div>
+          <div class="calc-btn btn-8">8</div>
+          <div class="calc-btn btn-9">9</div>
+          <div class="calc-btn op btn-subtract" data-value="-">−</div>
+          <div class="calc-btn btn-4">4</div>
+          <div class="calc-btn btn-5">5</div>
+          <div class="calc-btn btn-6">6</div>
+          <div class="calc-btn op btn-add" data-value="+">+</div>
+          <div class="calc-btn btn-1">1</div>
+          <div class="calc-btn btn-2">2</div>
+          <div class="calc-btn btn-3">3</div>
+          <div class="calc-btn eq btn-exec">solve</div>
+          <div class="calc-btn btn-0">0</div>
+          <div class="calc-btn btn-dot">.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="calc-categories" id="calculators" aria-labelledby="calc-categories-heading">
+    <h2 id="categories-heading">Calculator Categories</h2>
+    <ul class="categories-list" role="list">
+      <li><a href="#">Mathematics</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">Finance</a></li>
+      <li><a href="#">Health</a></li>
+      <li><a href="#">Converters and Utilities</a></li>
+      <li><a href="#">Others</a></li>
+    </ul>
+  </section>
+</main>
+
+ <footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Nume<span>Ro</span></a>
+
+        <p>
+          A collection of precise, fast calculation tools
+          for everyday life, education, and learning.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Calculator categories">
+        <h4>Calculators</h4>
+        <ul role="list">
+          <li><a href="#">Health &amp; Fitness</a></li>
+          <li><a href="#">Finance &amp; Loans</a></li>
+          <li><a href="#">Math &amp; Science</a></li>
+          <li><a href="#">Date &amp; Time</a></li>
+          <li><a href="#">Unit Converters</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="NumeRo links">
+        <h4>NumeRo</h4>
+        <ul role="list">
+          <li><a href="about.html">About NumeRo</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Suggest a Tool</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Information">
+        <h4>Information</h4>
+        <ul role="list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <span>NumeRo</span>. Built and maintained by an independent developer.</p>
+      <p>Built for precision. Designed for clarity.</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
