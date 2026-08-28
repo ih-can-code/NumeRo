@@ -68,6 +68,7 @@
 }
 
 /* --- Search Bar -------------------------------------------- */
+/*
 .search-bar {
   display: flex;
   align-items: stretch;
@@ -125,6 +126,7 @@
   transform: translateX(3px);
 
 }
+*/
 
 /* --- Nav Links --------------------------------------------- */
 .nav-links {
