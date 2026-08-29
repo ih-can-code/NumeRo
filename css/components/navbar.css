@@ -20,7 +20,8 @@
 
 /* --- Nav Layout -------------------------------------------- */
 .site-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 2rem;
   max-width: 1300px;
@@ -132,9 +133,11 @@
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0;
   list-style: none;
-  margin-left: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .nav-links > li > a {
@@ -193,8 +196,9 @@
   border-radius: 2px;
   padding: 0.55rem 0;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.40s ease, transform 0.40s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
   transform-origin: top center;
   will-change: transform, opacity;
   z-index: 200;
@@ -203,9 +207,17 @@
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
-  animation: dropdown-pop 0.40s cubic-bezier(0.2, 0.85, 0.2, 1) both;
   transform: translateX(-50%) translateY(0) rotate(0deg);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0s;
+}
+
+.dropdown:not(:hover):not(:focus-within) .dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-6px) rotate(-8deg);
 }
 
 .dropdown-menu li a {
