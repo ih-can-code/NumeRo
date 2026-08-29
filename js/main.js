@@ -1,8 +1,9 @@
-const mathCategoryLinks = document.querySelectorAll('[data-category="math"]');
+const categoryLinks = document.querySelectorAll('[data-category]');
 
-mathCategoryLinks.forEach((link) => {
+categoryLinks.forEach((link) => {
 	link.addEventListener("click", (event) => {
 		event.preventDefault();
-		window.location.href = "pages/math.html";
+		const category = link.dataset.category;
+		window.location.href = `pages/categories/${category}.html`;
 	});
 });
